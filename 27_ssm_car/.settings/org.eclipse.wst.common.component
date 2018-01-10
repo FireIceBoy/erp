@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="27_ssm_car">
+        <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/config"/>
+        <property name="java-output-path" value="/27_ssm_car/WebRoot/WEB-INF/classes"/>
+        <property name="context-root" value="/mjq"/>
+    </wb-module>
+</project-modules>
