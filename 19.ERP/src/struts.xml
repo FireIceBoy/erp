@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 解决乱码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<!-- 自定义扩展名 -->
+	<constant name="struts.action.extension" value="action,,"></constant>
+	<!-- 设置开发模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 设置配置文件修改后自动加载推荐在开发中使用 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+
+	<package name="allPackage" namespace="/" extends="struts-default"></package>
+
+
+	<include file="com/whsxt/config/provider.xml"></include>
+	<include file="com/whsxt/config/customer.xml"></include>
+	<include file="com/whsxt/config/login.xml"></include>
+	<include file="com/whsxt/config/admin.xml"></include>
+	<include file="com/whsxt/config/goods.xml"></include>
+	<include file="com/whsxt/config/inport.xml"></include>
+	<include file="com/whsxt/config/outport.xml"></include>
+	<include file="com/whsxt/config/sales.xml"></include>
+	<include file="com/whsxt/config/salesback.xml"></include>
+	<include file="com/whsxt/config/goodsname.xml"></include>
+	<include file="com/whsxt/config/authCode.xml"></include>
+	<include file="com/whsxt/config/operator.xml"></include>
+</struts>

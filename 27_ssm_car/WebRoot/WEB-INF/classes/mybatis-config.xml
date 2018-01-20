@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 1.配置分页插件 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<!-- 
+				这里的value对应连接的数据库
+			 -->
+			<property name="dialect" value="mysql"/>
+		</plugin>
+	</plugins>
+	<!-- 2.导入映射文件 -->
+	<mappers>
+		<mapper resource="cn/whsxt/car/mapper/MenuMapper.xml"/>
+		<mapper resource="cn/whsxt/car/mapper/RoleMapper.xml"/>
+		<mapper resource="cn/whsxt/car/mapper/UserMapper.xml"/>
+	</mappers>
+</configuration>

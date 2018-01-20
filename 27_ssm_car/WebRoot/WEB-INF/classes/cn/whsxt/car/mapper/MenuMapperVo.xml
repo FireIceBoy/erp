@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.whsxt.car.mapper.MenuMapperVo">
+	<select id="queryMenuByUserVo" resultType="cn.whsxt.car.pojo.Menu" parameterType="cn.whsxt.car.pojo.ActiveUser">
+		SELECT * FROM `menus` where `mid` in 
+			(select `mid` from menus_roles where rid = 
+				(SELECT userlevel from users where username = #{username}))
+				 AND pmid = #{pmid} AND type = 'menu'
+	</select>
+	
+	<select id="queryMenuUrlByUserVo" resultType="cn.whsxt.car.pojo.Menu" parameterType="cn.whsxt.car.pojo.ActiveUser">
+		SELECT url FROM `menus` where `mid` in 
+			(select `mid` from menus_roles where rid = 
+				(SELECT userlevel from users where username = #{username}))
+				 AND type = 'url'
+	</select>
+</mapper>

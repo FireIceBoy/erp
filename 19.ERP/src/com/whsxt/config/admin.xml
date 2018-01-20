@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 配置常量 -->
+	<!-- 处理乱码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<!-- 配置请求的后缀 -->
+	<constant name="struts.action.extension" value="action,,"></constant>
+	<!-- 设置开发模式 默认是不打开，false 如果项目上要上线，请去掉这个常量 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 设置配置文件修改后自动加载推荐在开发中使用 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+
+	<package name="admin" namespace="/" extends="allPackage">
+		<action name="admin_*" class="com.whsxt.action.AdminAction" method="{1}">
+			<result name="index">/WEB-INF/jsp/main/index.jsp</result>
+			<result name="right">/WEB-INF/jsp/main/right.jsp</result>
+			<result name="left">/WEB-INF/jsp/main/left.jsp</result>
+			<result name="top">/WEB-INF/jsp/main/top.jsp</result>
+			<result name="footer">/WEB-INF/jsp/main/footer.jsp</result>
+			<result name="inport">/WEB-INF/jsp/analysis/inport.jsp</result>
+			<result name="outport">/WEB-INF/jsp/analysis/outport.jsp</result>
+			<result name="login">/WEB-INF/jsp/main/login.jsp</result>
+		</action>
+	</package>
+
+</struts>
